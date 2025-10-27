@@ -20,7 +20,7 @@ ratio['CryoSleep'] = ratio['CryoSleep'] * 100  # Convert to percentage
 
 # Plot the line chart
 plt.figure(figsize=(9, 5))
-sns.lineplot(data=ratio, x='AgeGroup', y='CryoSleep', marker='o', linewidth=2.5, color='#1f77b4')
+sns.lineplot(data=ratio, x='AgeGroup', y='CryoSleep', marker='o', linewidth=2.5, color='teal')
 
 # Add labels and formatting
 plt.title("CryoSleep Ratio by 10-Year Age Group on the Spaceship Titanic", fontsize=14, pad=15)
