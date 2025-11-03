@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 file_path = "Copy of P2_Spaceship Titanic - Sheet1.csv"
 df = pd.read_csv(file_path)
 
-# Clean the data
+# Data cleaning
 df_clean = df.dropna(subset=['Age', 'CryoSleep'])
 
-# Create 10-year bins from 0 to 90
+# Calculate bin widths and create age groups
 bins = list(range(0, 91, 10))
 labels = [f"{i}-{i+9}" for i in bins[:-1]]
 df_clean['AgeGroup'] = pd.cut(df_clean['Age'], bins=bins, labels=labels, right=False)
@@ -20,7 +20,7 @@ ratio['CryoSleep'] = ratio['CryoSleep'] * 100  # Convert to percentage
 
 # Plot the line chart
 plt.figure(figsize=(9, 5))
-sns.lineplot(data=ratio, x='AgeGroup', y='CryoSleep', marker='o', linewidth=2.5, color='teal')
+sns.lineplot(data=ratio, x='AgeGroup', y='CryoSleep', marker='o', linewidth=2.5)
 
 # Add labels and formatting
 plt.title("CryoSleep Ratio by 10-Year Age Group on the Spaceship Titanic", fontsize=14, pad=15)
