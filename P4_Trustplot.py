@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+# livianne's data story for trust 
 
 # data
 df = pd.read_csv("indicator_bacteria_tests_datasd.csv", parse_dates=['date_sampled'])
