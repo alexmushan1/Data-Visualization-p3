@@ -27,8 +27,9 @@ monthly_avg = monthly_avg.sort_values('month')
 # Plot
 plt.figure(figsize=(10,6))
 sns.lineplot(data=yearly_filtered, x='year', y='cl2_total', marker='o')
-plt.title("Average Total Chlorine by Year", fontsize=14, pad=15)
+plt.title("Average Total Chlorine Level by Year", fontsize=14, pad=15)
 plt.xlabel("Year", fontsize=12)
 plt.ylabel("Average Chlorine Level Total", fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.5)
 
 plt.show()
